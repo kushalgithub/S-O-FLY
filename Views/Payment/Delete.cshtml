@@ -1,0 +1,75 @@
+﻿@model MvcApplication2.Models.Model_Payment_tbl
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Model_Payment_tbl</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Payment_Id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Payment_Id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.User_Id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.User_Id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Service)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Service)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Charge)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Charge)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Payment_Date)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Payment_Date)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Payment_Type)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Payment_Type)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Cheque_No)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Cheque_No)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Bank)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Bank)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

@@ -1,0 +1,79 @@
+﻿@model IEnumerable<MvcApplication2.Dbml.Tbl_ServiceApp>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="col-sm-12">
+                                <div class="card-box table-responsive">
+                                    <h4 class="m-t-0 header-title"><b>Service Application</b></h4>
+                                    <p class="text-muted font-13 m-b-30">
+                                       Service Application Information 
+                                    </p>
+
+                                    <table id="datatable" class="table table-striped table-bordered">
+									
+                                       <thead>
+                                            <tr>
+                                              <th>
+            @Html.DisplayNameFor(model => model.Service_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_UserReg.UserName)
+        </th>
+                                                 <th>
+            @Html.DisplayNameFor(model => model.Appointment_Date)
+        </th>
+       
+                                                <th>
+            @Html.DisplayNameFor(model => model.Problem)
+        </th>
+        
+                                                  <th>
+            @Html.DisplayNameFor(model => model.CarModel)
+        </th>
+                                                  <th>
+            @Html.DisplayNameFor(model => model.Branch_Id)
+        </th>
+
+
+        
+                                            </tr>
+                                        
+                                       </thead>
+                                        <tbody>
+                                           @foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Service_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tbl_UserReg.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Appointment_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Problem)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.CarModel)
+        </td>
+       
+         <td>
+            @Html.DisplayFor(modelItem => item.Branch_Id)
+        </td>
+       
+    </tr>
+}
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+
+

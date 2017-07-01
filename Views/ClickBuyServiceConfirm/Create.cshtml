@@ -1,0 +1,139 @@
+﻿@model IEnumerable<MvcApplication2.Dbml.Tbl_BuyService>
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/User_LayoutPage1.cshtml";
+}
+
+
+
+<link rel='stylesheet' id='rs-plugin-settings-css'  href='@Url.Content("~/cs1/settings.css?ver=5.0.9")' type='text/css' media='all' />
+
+<link rel='stylesheet' id='woocommerce_prettyPhoto_css-css'  href='@Url.Content("~/cs1/prettyPhoto.css?ver=4.3.3")' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-layout-css'  href='@Url.Content("~/cs1/woocommerce-layout.css?ver=2.4.7")' type='text/css' media='all' />
+
+<link rel='stylesheet' id='woocommerce-smallscreen-css'  href='@Url.Content("~/cs1/woocommerce-smallscreen.css?ver=2.4.7")' type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css'  href='@Url.Content("~/cs1/woocommerce.css?ver=2.4.7' type='text/css'")' media='all' />
+<link rel='stylesheet' id='google-font-opensans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300%2C300italic%2C400%2C600%2C700%2C800&#038;subset=latin%2Clatin-ext&#038;ver=4.3.3' type='text/css' media='all' />
+<link rel='stylesheet' id='reset-css'  href='@Url.Content("~/cs1/reset.css?ver=4.3.3' type='text/css'")' media='all' />
+<link rel='stylesheet' id='superfish-css'  href='@Url.Content("~/cs1/superfish.css?ver=4.3.3' type='text/css'")' media='all' />
+<link rel='stylesheet' id='prettyPhoto-css'  href='@Url.Content("~/cs1/prettyPhoto.css?ver=4.3.3' type='text/css'")' media='all' />
+<link rel='stylesheet' id='jquery-qtip-css'  href='@Url.Content("~/cs1/jquery.qtip.css?ver=4.3.3' type='text/css'")' media='all' />
+<link rel='stylesheet' id='odometer-css'  href='@Url.Content("~/cs1/odometer-theme-default.css?ver=4.3.3' type='text/css'")' media='all' />
+<link rel='stylesheet' id='animations-css'  href='@Url.Content("~/cs1/animations.css?ver=4.3.3' type='text/css'")' media='all' />
+<link rel='stylesheet' id='main-style-css'  href='@Url.Content("~/cs1/style.css?ver=4.3.3' type='text/css'")' media='all' />
+<link rel='stylesheet' id='responsive-css'  href='@Url.Content("~/cs1/responsive.css?ver=4.3.3' type='text/css'")' media='all' />
+<link rel='stylesheet' id='woocommerce-custom-css'  href='@Url.Content("~/cs1/style1.css?ver=4.3.3' type='text/css'")' media='all' />
+<link rel='stylesheet' id='woocommerce-responsive-css'  href='@Url.Content("~/cs1/responsive.css?ver=4.3.3")' type='text/css' media='all' />
+<link rel='stylesheet' id='cs-streamline-small-css'  href='@Url.Content("~/cs1/style2.css?ver=4.3.3")' type='text/css' media='all' />
+<link rel='stylesheet' id='cs-template-css'  href='@Url.Content("~/cs1/styles.css?ver=4.3.3")' type='text/css' media='all' />
+<link rel='stylesheet' id='cs-social-css'  href='@Url.Content("~/cs1/styles1.css?ver=4.3.3' type='text/css'")' media='all' />
+<link rel='stylesheet' id='custom-css'  href='@Url.Content("~/cs1/custom.css?ver=4.3.3' type='text/css'")' media='all' />
+<link rel="stylesheet" property='stylesheet' type="text/css" href='@Url.Content("~/cs1/style_selector.css")'>
+
+
+<div class="vc_row wpb_row vc_row-fluid gray full-width page-header vertical-align-table">
+<div class="vc_row wpb_row vc_inner vc_row-fluid full-width padding-top-bottom-50 vertical-align-cell">
+<div class="page-header-left">
+<h1>CART</h1>
+</div>
+</div>
+    </div>
+
+
+
+<div class="vc_row wpb_row vc_row-fluid page-margin-top">
+    <div class="vc_col-sm-12 wpb_column vc_column_container">
+<form action="http://quanticalabs.com/wp_themes/carservice/cart/" method="post">
+
+		
+		<table class="shop_table cart" cellspacing="0">
+			<thead>
+				<tr>
+					<th class="product-remove">&nbsp;</th>
+					<th class="product-thumbnail">Preview</th>
+					<th class="product-name">Service</th>
+					<th class="product-price">Service Name</th>
+					
+					<th class="product-subtotal">Price</th>
+				</tr>
+			</thead>
+			<tbody>
+				 @{
+         var cnt = 0;
+				 foreach (var item in Model) {
+         
+										<tr class="cart_item">
+
+							<td class="product-remove">
+								<a href='~/ClickBuyServiceConfirm/Delete/@Html.DisplayFor(modelItem => item.BuyService_Id)' class="remove" title="Remove this item">&times;</a>							</td>
+                                            
+							<td >
+								<a href="../../FileUpload/ @Html.DisplayFor(modelItem => item.Tbl_Service.ServiceImage)"><img width="180" height="180" src='../../FileUpload/@Html.DisplayFor(modelItem => item.Tbl_Service.ServiceImage)' class="attachment-shop_thumbnail wp-post-image" alt="T_7_front" /></a>							</td>
+
+							<td class="product-name">
+								<a href="#"> @Html.DisplayFor(modelItem => item.Tbl_Service.ServiceName) </a>							</td>
+
+                            
+
+							<td class="product-price">
+								<span class="amount">RS. @Html.DisplayFor(modelItem => item.Tbl_Service.ServiceCharge)</span>							</td>
+
+							
+
+							<td class="product-subtotal">
+                                @{
+         var x = item.Tbl_Service.ServiceCharge;
+         
+         var price = Convert.ToInt32(x);
+
+         cnt = Convert.ToInt32(cnt) + Convert.ToInt32(price);
+         Session["amount"] = cnt;		
+                                    }<span class="amount">RS.@price.00</span>							</td>
+                                            
+						</tr>
+     }	
+     
+     }
+               
+							</tbody>
+		</table>
+
+		
+
+		</form>
+    </div>
+    </div>
+
+<div class="cart_totals ">
+
+	
+	<h4 class="box-header">Cart Totals</h4>
+
+	<div class="clearfix page-margin-top">
+	<table cellspacing="0" class="shop_table cart_totals_table">
+
+		
+		
+		
+														
+		
+		<tr class="order-total">
+			<th>Total</th>
+			<td><strong><span class="amount">RS.@cnt.00</span></strong> </td>
+		</tr>
+		
+				<tr>
+			<td colspan="2">
+				<div class="wc-proceed-to-checkout">
+
+					<a href="~/PayPal/ValidateCommand" class="checkout-button button alt wc-forward">Proceed to Checkout</a>
+				</div>
+			</td>
+		</tr>
+
+		
+	</table>
+	</div>
+
+	</div>
+

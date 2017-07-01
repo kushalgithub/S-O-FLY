@@ -1,0 +1,60 @@
+﻿@model MvcApplication2.Models.Model_Area_tbl
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<script src="~/Scripts/jquery-1.7.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+
+
+
+ <div class="row">
+							<div class="col-lg-6">
+								<div class="card-box">
+									
+										<h4 class="m-t-0 header-title"><b>AREA</b></h4>
+									
+		                                        @using (Html.BeginForm()) {
+                                                @Html.ValidationSummary(true)
+									<div action="#" data-parsley-validate novalidate>
+										<div class="form-group">
+	                                                <label for="city">City*</label>
+                  
+	                                                   
+                                                    @Html.DropDownListFor(model => model.City_Id,(IEnumerable<SelectListItem>)ViewBag.cityid,"--Select--",new { @class="form-control"})
+                                                    @Html.ValidationMessageFor(model => model.City_Id) 
+	                                                      
+	                                                   
+														
+														</div>
+										<div class="form-group">
+											<label for="AreaName">Area Name*</label>
+                                           
+											
+                                             @Html.TextBoxFor(model => model.Area_Name,new { @class="form-control"})
+                                             @Html.ValidationMessageFor(model => model.Area_Name)
+										</div>
+												<div class="form-group text-right m-b-0">
+											<button class="btn btn-primary waves-effect waves-light" type="submit">
+												Add
+											</button>
+									</div>
+								</div>
+                                          }
+							</div>
+							
+            		</div>
+</div>
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,97 @@
+﻿@model IEnumerable<MvcApplication2.Dbml.Tbl_Part>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Worker_LayoutPage1.cshtml";
+}
+
+<div class="col-sm-12">
+                                <div class="card-box table-responsive">
+                                    <h4 class="m-t-0 header-title"><b>Parts</b></h4>
+                                    <p class="text-muted font-13 m-b-30">
+                                       Parts Information 
+                                    </p>
+
+                                    <table id="datatable" class="table table-striped table-bordered">
+									
+                                       <thead>
+                                            <tr>
+                                                <th>
+            @Html.DisplayNameFor(model => model.Part_Id)
+        </th>
+
+                                             <th>
+            @Html.DisplayNameFor(model => model.PartName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubCategory_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Part_No)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PartUsage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PartPrice)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.PartImage)
+        </th>
+        
+        <th></th>
+                                            </tr>
+                                        
+                                       </thead>
+                                        <tbody>
+                                         @foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Part_Id)
+        </td>
+        
+
+        <td>
+            @Html.DisplayFor(modelItem => item.PartName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubCategory_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Part_No)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PartUsage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PartPrice)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.PartImage)
+        </td>
+        <td>
+           
+            
+            
+        </td>
+    </tr>
+}
+
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+
+
+
+

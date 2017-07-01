@@ -1,0 +1,60 @@
+﻿@model IEnumerable<MvcApplication2.Dbml.Tbl_SubCategoty>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="col-sm-12">
+                                <div class="card-box table-responsive">
+                                    <h4 class="m-t-0 header-title"><b>Subcategory</b></h4>
+                                    <p class="text-muted font-13 m-b-30">
+                                       Subcategory Information 
+                                    </p>
+
+                                    <table id="datatable" class="table table-striped table-bordered">
+									
+                                       <thead>
+                                            <tr>
+                                              <th>
+            @Html.DisplayNameFor(model => model.SubCateName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubCateDiscription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category_Id)
+        </th>
+        <th></th>
+                                            </tr>
+                                        
+                                       </thead>
+                                        <tbody>
+                                          @foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubCateName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubCateDiscription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category_Id)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SubCategory_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SubCategory_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SubCategory_Id })
+        </td>
+    </tr>
+}
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+
+
+

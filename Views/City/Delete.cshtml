@@ -1,0 +1,64 @@
+﻿@model MvcApplication2.Models.Model_City_tbl
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="row">
+							<div class="col-lg-6">
+								<div class="card-box">
+										<h4 class="m-t-0 header-title"><b>City</b></h4>
+									
+	
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+	                                        
+									<div action="#" data-parsley-validate novalidate>
+
+                                        <div class="form-group">
+	                                                <label for="city">City Id*</label>
+	                                                
+             @Html.TextBoxFor(model => model.City_Id, new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.City_Id)
+	                                                    
+														</div>
+
+
+										<div class="form-group">
+	                                                <label for="city">City Name*</label>
+	                                                
+             @Html.TextBoxFor(model => model.City_Name, new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.City_Name)
+	                                                    
+														</div>
+
+                                        <div class="form-group">
+	                                                <label for="city">State*</label>
+	                                                
+               @Html.DropDownListFor(model => model.State_Id,(IEnumerable<SelectListItem>)ViewBag.stateid,"--Select--", new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.State_Id)
+	                                                    
+														</div>
+										
+												<div class="form-group text-right m-b-0">
+											<button class="btn btn-primary waves-effect waves-light" type="submit">
+												Delete
+											</button>
+                                                    </div>
+									</div>
+}
+								</div>
+							</div>
+							
+            		</div>
+
+
+
+
+@using (Html.BeginForm()) {
+    <p>
+        
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

@@ -1,0 +1,124 @@
+﻿@model MvcApplication2.Models.Model_Parts_tbl
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/User_LayoutPage1.cshtml";
+}
+
+<link rel='stylesheet' id='rs-plugin-settings-css'  href='@Url.Content("~/cs1/settings.css?ver=5.0.9")' type='text/css' media='all' />
+
+<link rel='stylesheet' id='woocommerce_prettyPhoto_css-css'  href='@Url.Content("~/cs1/prettyPhoto.css?ver=4.3.3")' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-layout-css'  href='@Url.Content("~/cs1/woocommerce-layout.css?ver=2.4.7")' type='text/css' media='all' />
+
+<link rel='stylesheet' id='woocommerce-smallscreen-css'  href='@Url.Content("~/cs1/woocommerce-smallscreen.css?ver=2.4.7")' type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css'  href='@Url.Content("~/cs1/woocommerce.css?ver=2.4.7' type='text/css'")' media='all' />
+<link rel='stylesheet' id='google-font-opensans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300%2C300italic%2C400%2C600%2C700%2C800&#038;subset=latin%2Clatin-ext&#038;ver=4.3.3' type='text/css' media='all' />
+<link rel='stylesheet' id='reset-css'  href='@Url.Content("~/cs1/reset.css?ver=4.3.3' type='text/css'")' media='all' />
+<link rel='stylesheet' id='superfish-css'  href='@Url.Content("~/cs1/superfish.css?ver=4.3.3' type='text/css'")' media='all' />
+<link rel='stylesheet' id='prettyPhoto-css'  href='@Url.Content("~/cs1/prettyPhoto.css?ver=4.3.3' type='text/css'")' media='all' />
+<link rel='stylesheet' id='jquery-qtip-css'  href='@Url.Content("~/cs1/jquery.qtip.css?ver=4.3.3' type='text/css'")' media='all' />
+<link rel='stylesheet' id='odometer-css'  href='@Url.Content("~/cs1/odometer-theme-default.css?ver=4.3.3' type='text/css'")' media='all' />
+<link rel='stylesheet' id='animations-css'  href='@Url.Content("~/cs1/animations.css?ver=4.3.3' type='text/css'")' media='all' />
+<link rel='stylesheet' id='main-style-css'  href='@Url.Content("~/cs1/style.css?ver=4.3.3' type='text/css'")' media='all' />
+<link rel='stylesheet' id='responsive-css'  href='@Url.Content("~/cs1/responsive.css?ver=4.3.3' type='text/css'")' media='all' />
+<link rel='stylesheet' id='woocommerce-custom-css'  href='@Url.Content("~/cs1/style1.css?ver=4.3.3' type='text/css'")' media='all' />
+<link rel='stylesheet' id='woocommerce-responsive-css'  href='@Url.Content("~/cs1/responsive.css?ver=4.3.3")' type='text/css' media='all' />
+<link rel='stylesheet' id='cs-streamline-small-css'  href='@Url.Content("~/cs1/style2.css?ver=4.3.3")' type='text/css' media='all' />
+<link rel='stylesheet' id='cs-template-css'  href='@Url.Content("~/cs1/styles.css?ver=4.3.3")' type='text/css' media='all' />
+<link rel='stylesheet' id='cs-social-css'  href='@Url.Content("~/cs1/styles1.css?ver=4.3.3' type='text/css'")' media='all' />
+<link rel='stylesheet' id='custom-css'  href='@Url.Content("~/cs1/custom.css?ver=4.3.3' type='text/css'")' media='all' />
+<link rel="stylesheet" property='stylesheet' type="text/css" href='@Url.Content("~/cs1/style_selector.css")'>
+
+<div class="clearfix">
+		<div class="vc_row wpb_row vc_row-fluid margin-top-70">
+			<div class="vc_col-sm-9 wpb_column vc_column_container ">
+				<div class="wpb_wrapper">
+					
+                     @using (Html.BeginForm()) {
+                     @Html.ValidationSummary(true)
+
+                         @Html.HiddenFor(model => model.Category_Id)
+                         @Html.HiddenFor(model => model.SubCategory_Id)
+                         @Html.HiddenFor(model => model.Part_Id)
+                         @Html.HiddenFor(model => model.PartPrice)
+<div itemscope itemtype="http://schema.org/Product" id="product-37" class="post-37 product type-product status-publish has-post-thumbnail product_cat-clothing product_cat-t-shirts shipping-taxable purchasable product-type-simple product-cat-clothing product-cat-t-shirts instock">
+     
+	<div class="images">
+
+	<a href="../../FileUpload/@Html.DisplayFor(model => model.PartImage)" itemprop="image" class="woocommerce-main-image zoom" title="" data-rel="prettyPhoto[product-gallery]"><img width="600" height="600" src= '../../FileUpload/@Html.DisplayFor(model => model.PartImage)' class="attachment-shop_single wp-post-image" alt="T_7_front" title="T_7_front" /></a>
+		
+	
+</div>
+     
+	<div class="summary entry-summary">
+
+		
+	
+
+<h1 itemprop="name" class="product_title entry-title">@Html.DisplayFor(model => model.PartName)</h1>
+<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+
+	<p class="price"><span class="amount">RS. @Html.DisplayFor(model => model.PartPrice)</span></p>
+
+	<meta itemprop="price" content="18" />
+	<meta itemprop="priceCurrency" content="USD" />
+	<link itemprop="availability" href="http://schema.org/InStock" />
+
+</div>
+<div itemprop="description" class="description">
+	<p>@Html.DisplayFor(model => model.PartUsage)</p>
+</div>
+
+
+        
+	
+	<div class="cart" method="post" enctype='multipart/form-data'>
+	 	
+	 	<div class="quantity"><input type="button" class="minus" value="-">@Html.TextBoxFor(model=>model.Quantity,new {@type="number",@step="1",@min="1",@name="quantity",@value="1",@title="Qty",@class="input-text qty text",@size=""})
+<input type="button" class="plus" value="+"></div>
+
+	 	<input type="hidden" name="add-to-cart" value="37" />
+
+	 	<button type="submit" class="single_add_to_cart_button button alt">ADD TO CART</button>
+
+			</div>
+
+	
+
+
+
+	</div><!-- .summary -->
+
+	
+	
+
+    
+	<div class="upsells products">
+
+		
+
+		<ul class="products">
+			
+				
+
+			
+		</ul>
+	</div>
+
+
+	
+
+
+	<meta itemprop="url" content="http://quanticalabs.com/wp_themes/carservice/product/happy-ninja/" />
+     
+</div><!-- #product-37 -->
+                     }    
+     </div> 
+			</div>
+			<div class="vc_col-sm-3 wpb_column vc_column_container">
+				<div class="wpb_wrapper">
+				
+				</div>
+			</div>
+		</div>
+    </div>

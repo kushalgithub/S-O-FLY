@@ -1,0 +1,65 @@
+﻿@model IEnumerable<MvcApplication2.Dbml.Tbl_Service>
+
+@{
+    ViewBag.Title = "Services";
+    Layout = "~/Views/Shared/User_LayoutPage1.cshtml";
+}
+
+<div class="theme-page padding-bottom-70">
+            <div class="vc_row wpb_row vc_row-fluid gray full-width page-header vertical-align-table">
+                <div class="vc_row wpb_row vc_inner vc_row-fluid full-width padding-top-bottom-100 vertical-align-cell">
+                    <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                        <div class="page-header-left">
+                            <h1>Services</h1>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="vc_row wpb_row vc_row-fluid margin-top-70">
+                    <div class="vc_col-sm-9 wpb_column vc_column_container ">
+                        <div class="wpb_wrapper">
+
+
+
+
+                            
+
+                            <ul class="products">
+
+                                                                    @foreach (var item in Model) {      
+
+                                <li class="first post-70 product type-product status-publish has-post-thumbnail product_cat-posters sale shipping-taxable purchasable product-type-simple product-cat-posters instock">
+
+
+                                    <a href='@Url.Action("Create","ClickBuyService")'>
+
+
+                                        <img width="300" height="300" src='~/FileUpload/@Html.DisplayFor(modelItem => item.ServiceImage)' class="attachment-shop_catalog wp-post-image" alt="poster_2_up" /><h3>@Html.DisplayFor(modelItem => item.ServiceName)</h3>
+
+                                        <ins><span class="amount">RS.@Html.DisplayFor(modelItem => item.ServiceCharge)</span></ins>
+
+                                    </a>
+
+                                    <a href='~/ClickBuyService/Create/@Html.DisplayFor(modelItem => item.Service_Id)'  class="button add_to_cart_button product_type_simple">ADD SERVICE</a>
+                                </li>
+
+                                                                    }               
+                                
+
+                            </ul>
+                            
+
+                        </div>
+                    </div>
+                    <div class="vc_col-sm-3 wpb_column vc_column_container">
+                        <div class="wpb_wrapper">
+                            <div class="wpb_widgetised_column wpb_content_element clearfix">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

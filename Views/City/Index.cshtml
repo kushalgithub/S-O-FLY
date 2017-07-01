@@ -1,0 +1,53 @@
+﻿@model IEnumerable<MvcApplication2.Dbml.Tbl_City>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+<div class="col-sm-12">
+                                <div class="card-box table-responsive">
+                                    <h4 class="m-t-0 header-title"><b>City</b></h4>
+                                    <p class="text-muted font-13 m-b-30">
+                                       City Information 
+                                    </p>
+
+                                    <table id="datatable" class="table table-striped table-bordered">
+									
+                                       <thead>
+                                            <tr>
+                                              <th>
+            @Html.DisplayNameFor(model => model.City_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.State_Id)
+        </th>
+        <th></th>
+                                            </tr>
+                                        
+                                       </thead>
+                                        <tbody>
+                                           @foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.City_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.State_Id)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.City_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.City_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.City_Id })
+        </td>
+    </tr>
+}
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+

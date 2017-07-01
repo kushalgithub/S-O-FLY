@@ -1,0 +1,91 @@
+﻿@model MvcApplication2.Models.Model_Parts_tbl
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="row">
+							<div class="col-lg-6">
+								<div class="card-box">
+										<h4 class="m-t-0 header-title"><b>Parts</b></h4>
+									
+	
+@using (Html.BeginForm("Edit", "Parts", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.ValidationSummary(true)
+	                                        
+									<div action="#" data-parsley-validate novalidate>
+
+                                        <div class="form-group">
+	                                                <label for="part">Part Id*</label>
+	        @Html.TextBoxFor(model => model.Part_Id, new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.Part_Id)
+        </div>
+
+										<div class="form-group">
+	                                                <label for="part">Part Name*</label>
+	        @Html.TextBoxFor(model => model.PartName, new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.PartName)
+        </div>
+	                                                    
+														</div>
+    
+     <div class="form-group">
+	                                                <label for="part">Subcategory*</label>
+	          @Html.DropDownListFor(model => model.SubCategory_Id,(IEnumerable<SelectListItem>)ViewBag.subcatid,"--Select--", new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.SubCategory_Id)
+        </div>
+	             
+    <div class="form-group">
+	                                                <label for="part">Category*</label>
+	        @Html.DropDownListFor(model => model.Category_Id,(IEnumerable<SelectListItem>)ViewBag.catid,"--Select--", new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.Category_Id)
+        </div>                                     
+    
+                                         <div class="form-group">
+	                                                <label for="part">Part Number*</label>
+	        @Html.TextBoxFor(model => model.Part_No, new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.Part_No)
+        </div>
+	                                                    
+														
+										 <div class="form-group">
+	                                                <label for="part">Part Usage*</label>
+	        @Html.TextBoxFor(model => model.PartUsage, new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.PartUsage)
+        </div>
+	                                                    
+														
+    
+                                            <div class="form-group">
+	                                                <label for="part">Part Price*</label>
+	        @Html.TextBoxFor(model => model.PartPrice, new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.PartPrice)
+        </div>
+	                                        
+    
+                                        <div class="form-group">
+	                                                <label for="part">Part Image*</label>
+                                            <input type="file" name="file1" />
+                                post pic
+	        @*Html.TextBoxFor(model => model.PartImage, new { @class="form-control"})*@
+            @Html.ValidationMessageFor(model => model.PartImage)
+        </div>            
+													
+												
+}
+								</div>
+							</div>
+							
+            		</div>
+
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,50 @@
+﻿@model IEnumerable<MvcApplication2.Dbml.Tbl_Category>
+
+@{
+    ViewBag.Title = "WorIndex";
+    Layout = "~/Views/Shared/Worker_LayoutPage1.cshtml";
+}
+
+<div class="col-sm-12">
+                                <div class="card-box table-responsive">
+                                    <h4 class="m-t-0 header-title"><b>Category</b></h4>
+                                    <p class="text-muted font-13 m-b-30">
+                                       Category Information 
+                                    </p>
+
+                                    <table id="datatable" class="table table-striped table-bordered">
+									
+                                       <thead>
+                                            <tr>
+                                                <th>
+            @Html.DisplayNameFor(model => model.Category_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Discription)
+        </th>
+        <th></th>
+                                            </tr>
+                                        
+                                       </thead>
+                                        <tbody>
+                                           @foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Discription)
+        </td>
+        <td>
+                       
+            
+        </td>
+    </tr>
+}
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+

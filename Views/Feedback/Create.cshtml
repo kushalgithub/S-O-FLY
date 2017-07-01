@@ -1,0 +1,72 @@
+﻿@model MvcApplication2.Models.Model_Feedback
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/User_LayoutPage1.cshtml";
+}
+
+
+<div class="theme-page">
+    <div class="clearfix">
+
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+
+            <div id="contact-form" action="#" method="post" class="vc_row wpb_row vc_row-fluid padding-bottom-66 page-margin-top cost-calculator-container contact-form">
+                <div class="wpb_column vc_column_container vc_col-sm-12">
+                    <div class="wpb_wrapper">
+                        <div class="vc_row wpb_row vc_inner vc_row-fluid page-margin-top">
+                            <div class="wpb_column vc_column_container vc_col-sm-6">
+                            </div>
+                            <div class="wpb_column vc_column_container vc_col-sm-6">
+                                <div class="wpb_wrapper">
+                                    <div class="cost-calculator-box cost-calculator-contact clearfix">
+                                        <div class="vc_row wpb_row vc_inner">
+                                            <label>Feedback</label>
+                                        </div>
+                                        <div class="vc_row wpb_row vc_inner margin-top-20">
+                                            <div class="block">
+                                                
+                                                 <label>Feedback</label>
+                                                @Html.TextBoxFor(model => model.Feedback, new { @class = "text_input" })
+                                                @Html.ValidationMessageFor(model => model.Feedback)
+                                            </div>
+                                          </div>
+
+                                         <div class="vc_row wpb_row vc_inner margin-top-20">
+                                            <div class="block">
+                                                
+                                                 <label>Ratings</label>
+                                                @Html.DropDownListFor(model => model.Rating, new List<SelectListItem>() {new SelectListItem { Text="----select----", Value = "0"},new SelectListItem { Text="1", Value = "1"}, new SelectListItem { Text="2", Value = "2"}, new SelectListItem { Text="3", Value = "3"}, new SelectListItem { Text="4", Value = "4"}, new SelectListItem { Text="5", Value = "5"}})
+
+                                                @Html.ValidationMessageFor(model => model.Rating)
+                                            </div>
+                                          </div>
+
+                                        <div >
+                                            <input type="hidden" name="action" value="theme_cost_calculator_form">
+                                            <input type="hidden" name="type" value="appointment">
+                                           <input type="submit"  class="more display-block submit-contact-form" value="SUBMIT NOW" />
+                                        </div>
+                                   
+                                             </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                        
+                </div>
+            </div>
+                </div>
+        
+        }
+            </div>
+            </div>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

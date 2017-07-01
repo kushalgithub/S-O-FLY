@@ -1,0 +1,60 @@
+﻿@model MvcApplication2.Models.Model_SubCategory_tbl
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="row">
+							<div class="col-lg-6">
+								<div class="card-box">
+										<h4 class="m-t-0 header-title"><b>SubCategory</b></h4>
+									
+	
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+	                                        
+									<div action="#" data-parsley-validate novalidate>
+										<div class="form-group">
+	                                                <label for="subname">Subcategory Name*</label>
+	                                                
+              @Html.TextBoxFor(model => model.SubCateName, new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.SubCateName)
+	                                                    
+														</div>
+										
+                                        <div class="form-group">
+	                                                <label for="subdis">Subcategory Discription*</label>
+	                                                
+              @Html.TextBoxFor(model => model.SubCateDiscription, new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.SubCateDiscription)
+	                                                    
+														</div>
+
+                                        <div class="form-group">
+	                                                <label for="subdis">Category*</label>
+	                                                
+              @Html.DropDownListFor(model => model.Category_Id,(IEnumerable<SelectListItem>)ViewBag.catid,"--Select--", new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.Category_Id)
+	                                                    
+														</div>
+												<div class="form-group text-right m-b-0">
+											<button class="btn btn-primary waves-effect waves-light" type="submit">
+												Add
+											</button>
+                                                    </div>
+									</div>
+}
+								</div>
+							</div>
+							
+            		</div>
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

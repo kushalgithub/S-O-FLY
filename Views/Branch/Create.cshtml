@@ -1,0 +1,162 @@
+﻿@model MvcApplication2.Models.Model_Branch_tbl
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<script src="~/Scripts/jquery-1.7.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script>
+
+    $(function () {
+        $("#Country_Id").change(
+            function () {
+                $.ajax(
+                    {
+                        url: "@Url.Action("LoadState", "Branch")", data: { "id": $(this).val() }
+                        , type: "POST",
+                        error: function () {
+                            alert("Error");
+                        },
+                        success: function (data) {
+                            var items = "<option value='0'>--Select--</option>";
+                            $.each(data, function (i, item) {
+                                items += "<option value=\"" + item.Value + "\">" + item.Text + "</option>";
+                            })
+                            $("#State_Id").html(items);
+                        }
+                    })
+            });
+    });
+
+    $(function () {
+        $("#State_Id").change(
+            function () {
+                $.ajax(
+                    {
+                        url: "@Url.Action("LoadCity", "UserReg")", data: { "id": $(this).val() }
+                        , type: "POST",
+                        error: function () {
+                            alert("Error");
+                        },
+                        success: function (data) {
+                            var items = "<option value='0'>--Select--</option>";
+                            $.each(data, function (i, item) {
+                                items += "<option value=\"" + item.Value + "\">" + item.Text + "</option>";
+                            })
+                            $("#City_Id").html(items);
+                        }
+                    })
+            });
+    });
+
+
+    $(function () {
+        $("#City_Id").change(
+            function () {
+                $.ajax(
+                    {
+                        url: "@Url.Action("LoadArea", "UserReg")", data: { "id": $(this).val() }
+                        , type: "POST",
+                        error: function () {
+                            alert("Error");
+                        },
+                        success: function (data) {
+                            var items = "<option value='0'>--Select--</option>";
+                            $.each(data, function (i, item) {
+                                items += "<option value=\"" + item.Value + "\">" + item.Text + "</option>";
+                            })
+                            $("#Area_Id").html(items);
+                        }
+                    })
+            });
+    });
+
+
+   
+
+</script>
+
+
+<div class="row">
+							<div class="col-lg-6">
+								<div class="card-box">
+										<h4 class="m-t-0 header-title"><b>Branch</b></h4>
+									
+	
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+	                                        
+									<div action="#" data-parsley-validate novalidate>
+										<div class="form-group">
+	                                                <label for="branchadd">Address*</label>
+	                                                
+            @Html.TextBoxFor(model => model.Address, new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.Address)
+	                                                    
+														</div>
+                                       
+                                        <div class="form-group">
+	                                                <label for="brancharea">Area*</label>
+	                                                
+            @Html.DropDownListFor(model => model.Area_Id,(IEnumerable<SelectListItem>)ViewBag.areaid, new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.Area_Id)
+	                                                    
+														</div>
+
+                                          <div class="form-group">
+	                                                <label for="branchcity">City*</label>
+	                                                
+             @Html.DropDownListFor(model => model.City_Id,(IEnumerable<SelectListItem>)ViewBag.cityid, new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.City_Id)
+	                                                    
+														</div>
+
+                                          <div class="form-group">
+	                                                <label for="branchadd">State*</label>
+	                                                
+             @Html.DropDownListFor(model => model.State_Id,(IEnumerable<SelectListItem>)ViewBag.stateid, new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.State_Id)
+	                                                    
+														</div>
+
+                                        <div class="form-group">
+	                                                <label for="branchadd">Country*</label>
+	                                                
+            @Html.DropDownListFor(model => model.Country_Id,(IEnumerable<SelectListItem>)ViewBag.countryid, new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.Country_Id)
+	                                                    
+														</div>
+
+                                        <div class="form-group">
+	                                                <label for="branchadd">Contact Number*</label>
+	                                                
+            @Html.TextBoxFor(model => model.Contact_No, new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.Contact_No)
+	                                                    
+														</div>
+										
+												<div class="form-group text-right m-b-0">
+											<button class="btn btn-primary waves-effect waves-light" type="submit">
+												Add
+											</button>
+                                                    </div>
+									</div>
+}
+								</div>
+							</div>
+							
+            		</div>
+
+
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

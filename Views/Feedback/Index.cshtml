@@ -1,0 +1,72 @@
+﻿@model IEnumerable<MvcApplication2.Dbml.Tbl_Feedback>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+<div class="col-sm-12">
+                                <div class="card-box table-responsive">
+                                    <h4 class="m-t-0 header-title"><b>FeedBack</b></h4>
+                                    <p class="text-muted font-13 m-b-30">
+                                       Feedback Information 
+                                    </p>
+
+                                    <table id="datatable" class="table table-striped table-bordered">
+									
+                                       <thead>
+                                            <tr>
+                                              <th>
+            @Html.DisplayNameFor(model => model.Feedback_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_UserReg.UserName)
+        </th>
+                                                 <th>
+            @Html.DisplayNameFor(model => model.Feedback)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rating)
+        </th>
+       
+
+
+        <th></th>
+                                            </tr>
+                                        
+                                       </thead>
+                                        <tbody>
+                                           @foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Feedback_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tbl_UserReg.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Feedback)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Rating)
+        </td>
+        
+
+
+        <td>
+            
+            @Html.ActionLink("Details", "Details", new { id=item.Feedback_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Feedback_Id })
+        </td>
+    </tr>
+}
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+

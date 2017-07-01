@@ -1,0 +1,503 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+        <!--meta-->
+    <meta charset="UTF-8" />
+    <meta name="generator" content="WordPress 4.3.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.2" />
+    <meta name="description" content="Mechanic Auto Shop Theme" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--style-->
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://quanticalabs.com/wp_themes/carservice/feed/" />
+    <link rel="pingback" href="http://quanticalabs.com/wp_themes/carservice/xmlrpc.php" />
+    <link rel="shortcut icon" href='@Url.Content("~/image/favicon.ico")' />
+    <title>Car Service | Mechanic Auto Shop Theme</title>
+    <link rel="alternate" type="application/rss+xml" title="Car Service &raquo; Feed" href="http://quanticalabs.com/wp_themes/carservice/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="Car Service &raquo; Comments Feed" href="http://quanticalabs.com/wp_themes/carservice/comments/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="Car Service &raquo; HOME Comments Feed" href="http://quanticalabs.com/wp_themes/carservice/home/feed/" />
+    <script type="text/javascript">
+        window._wpemojiSettings = { "baseUrl": "http:\/\/s.w.org\/images\/core\/emoji\/72x72\/", "ext": ".png", "source": { "concatemoji": "http:\/\/quanticalabs.com\/wp_themes\/carservice\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3.2" } };
+        !function (a, b, c) { function d(a) { var c = b.createElement("canvas"), d = c.getContext && c.getContext("2d"); return d && d.fillText ? (d.textBaseline = "top", d.font = "600 32px Arial", "flag" === a ? (d.fillText(String.fromCharCode(55356, 56812, 55356, 56807), 0, 0), c.toDataURL().length > 3e3) : (d.fillText(String.fromCharCode(55357, 56835), 0, 0), 0 !== d.getImageData(16, 16, 1, 1).data[0])) : !1 } function e(a) { var c = b.createElement("script"); c.src = a, c.type = "text/javascript", b.getElementsByTagName("head")[0].appendChild(c) } var f, g; c.supports = { simple: d("simple"), flag: d("flag") }, c.DOMReady = !1, c.readyCallback = function () { c.DOMReady = !0 }, c.supports.simple && c.supports.flag || (g = function () { c.readyCallback() }, b.addEventListener ? (b.addEventListener("DOMContentLoaded", g, !1), a.addEventListener("load", g, !1)) : (a.attachEvent("onload", g), b.attachEvent("onreadystatechange", function () { "complete" === b.readyState && c.readyCallback() })), f = c.source || {}, f.concatemoji ? e(f.concatemoji) : f.wpemoji && f.twemoji && (e(f.twemoji), e(f.wpemoji))) }(window, document, window._wpemojiSettings);
+		</script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji
+        {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' id='rs-plugin-settings-css' href='@Url.Content("~/cs/settings.css?ver=5.0.9' type='text/css")' media='all' />
+    <style id='rs-plugin-settings-inline-css' type='text/css'>
+        .tp-caption a
+        {
+            color: #ff7302;
+            text-shadow: none;
+            -webkit-transition: all 0.2s ease-out;
+            -moz-transition: all 0.2s ease-out;
+            -o-transition: all 0.2s ease-out;
+            -ms-transition: all 0.2s ease-out;
+        }
+
+            .tp-caption a:hover
+            {
+                color: #ffa902;
+            }
+
+        .tp-caption a
+        {
+            color: #ff7302;
+            text-shadow: none;
+            -webkit-transition: all 0.2s ease-out;
+            -moz-transition: all 0.2s ease-out;
+            -o-transition: all 0.2s ease-out;
+            -ms-transition: all 0.2s ease-out;
+        }
+
+            .tp-caption a:hover
+            {
+                color: #ffa902;
+            }
+
+        .tp-caption a
+        {
+            color: #ff7302;
+            text-shadow: none;
+            -webkit-transition: all 0.2s ease-out;
+            -moz-transition: all 0.2s ease-out;
+            -o-transition: all 0.2s ease-out;
+            -ms-transition: all 0.2s ease-out;
+        }
+
+            .tp-caption a:hover
+            {
+                color: #ffa902;
+            }
+
+        .tp-caption a
+        {
+            color: #ff7302;
+            text-shadow: none;
+            -webkit-transition: all 0.2s ease-out;
+            -moz-transition: all 0.2s ease-out;
+            -o-transition: all 0.2s ease-out;
+            -ms-transition: all 0.2s ease-out;
+        }
+
+            .tp-caption a:hover
+            {
+                color: #ffa902;
+            }
+
+        .tp-caption a
+        {
+            color: #ff7302;
+            text-shadow: none;
+            -webkit-transition: all 0.2s ease-out;
+            -moz-transition: all 0.2s ease-out;
+            -o-transition: all 0.2s ease-out;
+            -ms-transition: all 0.2s ease-out;
+        }
+
+            .tp-caption a:hover
+            {
+                color: #ffa902;
+            }
+
+        .tp-caption a
+        {
+            color: #ff7302;
+            text-shadow: none;
+            -webkit-transition: all 0.2s ease-out;
+            -moz-transition: all 0.2s ease-out;
+            -o-transition: all 0.2s ease-out;
+            -ms-transition: all 0.2s ease-out;
+        }
+
+            .tp-caption a:hover
+            {
+                color: #ffa902;
+            }
+    </style>
+    <link rel='stylesheet' id='woocommerce-layout-css' href='@Url.Content("~/cs/woocommerce-layout.css?ver=2.4.7' type='text/css' media='all")' />
+    <link rel='stylesheet' id='woocommerce-smallscreen-css' href='@Url.Content("~/cs/woocommerce-smallscreen.css?ver=2.4.7' type='text/css' media='only screen and (max-width: 768px)")' />
+    <link rel='stylesheet' id='woocommerce-general-css' href='@Url.Content("~/cs/woocommerce.css?ver=2.4.7' type='text/css' media='all")' />
+    <link rel='stylesheet' id='google-font-opensans-css' href='//fonts.googleapis.com/css?family=Open+Sans%3A300%2C300italic%2C400%2C600%2C700%2C800&#038;subset=latin%2Clatin-ext&#038;ver=4.3.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='reset-css' href='@Url.Content("~/cs/reset.css?ver=4.3.2' type='text/css' media='all")' />
+    <link rel='stylesheet' id='superfish-css' href='@Url.Content("~/cs/superfish.css?ver=4.3.2' type='text/css' media='all")' />
+    <link rel='stylesheet' id='prettyPhoto-css' href='@Url.Content("~/cs/prettyPhoto.css?ver=4.3.2' type='text/css' media='all")' />
+    <link rel='stylesheet' id='jquery-qtip-css' href='@Url.Content("~/cs/jquery.qtip.css?ver=4.3.2' type='text/css' media='all")' />
+    <link rel='stylesheet' id='odometer-css' href='@Url.Content("~/cs/odometer-theme-default.css?ver=4.3.2' type='text/css' media='all")' />
+    <link rel='stylesheet' id='animations-css' href='@Url.Content("~/cs/animations.css?ver=4.3.2' type='text/css' media='all")' />
+    <link rel='stylesheet' id='main-style-css' href='@Url.Content("~/cs/style.css?ver=4.3.2' type='text/css' media='all")' />
+    <link rel='stylesheet' id='responsive-css' href='@Url.Content("~/cs/responsive.css?ver=4.3.2' type='text/css' media='all")' />
+    <link rel='stylesheet' id='woocommerce-custom-css' href='@Url.Content("~/cs/style1.css?ver=4.3.2' type='text/css' media='all")' />
+    <link rel='stylesheet' id='woocommerce-responsive-css' href='@Url.Content("~/cs/responsive.css?ver=4.3.2' type='text/css' media='all")' />
+    <link rel='stylesheet' id='cs-streamline-small-css' href='@Url.Content("~/cs/style2.css?ver=4.3.2' type='text/css' media='all")' />
+    <link rel='stylesheet' id='cs-template-css' href='@Url.Content("~/cs/styles.css?ver=4.3.2' type='text/css' media='all")' />
+    <link rel='stylesheet' id='cs-social-css' href='@Url.Content("~/cs/styles1.css?ver=4.3.2' type='text/css' media='all")' />
+    <link rel='stylesheet' id='custom-css' href='@Url.Content("~/cs/custom.css?ver=4.3.2' type='text/css' media='all")' />
+    <link rel='stylesheet' id='js_composer_front-css' href='@Url.Content("~/cs/js_composer.css?ver=4.7.4' type='text/css' media='all")' />
+    <script type='text/javascript' src='@Url.Content("~/jsu/jquery.js?ver=1.11.3")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/jquery-migrate.min.js?ver=1.2.1")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/jquery.themepunch.tools.min.js?ver=5.0.9")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/jquery.themepunch.revolution.min.js?ver=5.0.9")'></script>
+
+    <script type="text/javascript" src='@Url.Content("~/jsu/revolution.extension.slideanims.min.js")'></script>
+    <script type="text/javascript" src='@Url.Content("~/jsu/revolution.extension.layeranimation.min.js")'></script>
+    <script type="text/javascript" src='@Url.Content("~/jsu/revolution.extension.navigation.min.js")'></script>
+
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var wc_add_to_cart_params = { "ajax_url": "\/wp_themes\/carservice\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/wp_themes\/carservice\/?wc-ajax=%%endpoint%%", "i18n_view_cart": "View Cart", "cart_url": "http:\/\/quanticalabs.com\/wp_themes\/carservice\/cart\/", "is_cart": "", "cart_redirect_after_add": "no" };
+        /* ]]> */
+</script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/add-to-cart.min.js?ver=2.4.7")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/woocommerce-add-to-cart.js?ver=4.7.4")'></script>
+    <script type='text/javascript' src='//maps.google.com/maps/api/js?sensor=false&#038;ver=4.3.2'></script>
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://quanticalabs.com/wp_themes/carservice/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://quanticalabs.com/wp_themes/carservice/wp-includes/wlwmanifest.xml" />
+    <meta name="generator" content="WordPress 4.3.2" />
+    <meta name="generator" content="WooCommerce 2.4.7" />
+    <link rel='canonical' href='http://quanticalabs.com/wp_themes/carservice/' />
+    <link rel='shortlink' href='http://quanticalabs.com/wp_themes/carservice/' />
+    <meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress." />
+    <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="cs/vc_lte_ie9.css" media="screen"><![endif]-->
+    <!--[if IE  8]><link rel="stylesheet" type="text/css" href="cs/vc-ie8.css" media="screen"><![endif]-->
+    <meta name="generator" content="Powered by Slider Revolution 5.0.9 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+    <style type="text/css" data-type="vc_shortcodes-custom-css">
+        .vc_custom_1439892689981
+        {
+            background-color: #f5f5f5 !important;
+        }
+
+        .vc_custom_1441196365110
+        {
+            background-color: #f5f5f5 !important;
+        }
+
+        .vc_custom_1441108258312
+        {
+            background-image: url(image/image_012.jpg?id=928) !important;
+        }
+
+        .vc_custom_1432038677789
+        {
+            background-color: #f5f5f5 !important;
+        }
+
+        .vc_custom_1441196358309
+        {
+            background-image: url(image/image_01.jpg?id=917) !important;
+        }
+
+        .vc_custom_1439977887316
+        {
+            margin-top: 30px !important;
+        }
+    </style>
+    <noscript>
+        <style>
+            .wpb_animate_when_almost_visible
+            {
+                opacity: 1;
+            }
+        </style>
+    </noscript>
+    <!-- <script type="text/javascript" src="http://quanticalabs.com/wp_themes/carservice/wp-content/plugins/revslider/public/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script type="text/javascript" src="http://quanticalabs.com/wp_themes/carservice/wp-content/plugins/revslider/public/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript" src="http://quanticalabs.com/wp_themes/carservice/wp-content/plugins/revslider/public/assets/js/extensions/revolution.extension.navigation.min.js"></script>
+ -->
+</head>
+<body class="home page page-id-4 page-template page-template-template-default-without-breadcrumbs page-template-template-default-without-breadcrumbs-php wpb-js-composer js-comp-ver-4.7.4 vc_responsive archive post-type-archive post-type-archive-product woocommerce woocommerce-page wpb-js-composer js-comp-ver-4.7.4 vc_responsive">
+     
+    <div class="site-container">
+       
+        <!-- Header -->
+        <div class="header-container">
+            <div class="vertical-align-table">
+                <div class="header clearfix">
+                    <div class="logo vertical-align-cell">
+                        <h1><a href="http://quanticalabs.com/wp_themes/carservice" title="Car Service">S-O-FLY														</a></h1>
+                    </div>
+                    <a href="#" class="mobile-menu-switch vertical-align-cell">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </a>
+                    <div class="menu-container clearfix vertical-align-cell">
+                        <nav class="menu-main-menu-container">
+
+                           
+
+                            <ul id="menu-main-menu" class="sf-menu">
+                                <li id="menu-item-972" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4 current_page_item menu-item-972"><a href='@Url.Action("my","User")'>Home</a></li>
+                                <li id="menu-item-973" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-973"><a href='@Url.Action("Services","ClickServices")'>Services</a>
+                                    
+                                </li>
+
+                                 <li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-973"><a href="#">Options</a>
+<ul class="sub-menu">
+ <li id="menu-item-11" class="left-flyout menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-980"><a href='@Url.Action("Create","ChangePwd")'>ChangePassword</a>
+                                   
+                                </li>
+                                <li id="menu-item-232" class="left-flyout menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-980"><a href='@Url.Action("Create","Feedback")'>Feedback</a>
+                                   
+                                </li>
+                                <li id="menu-item-243" class="left-flyout menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-980"><a href='@Url.Action("Create","Complain")'>Complain</a>
+                                   
+                                </li>
+                                <li id="menu-item-221" class="left-flyout menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-980"><a href='@Url.Action("Track","ClickBuyServiceConfirm")'>Track My Service</a>
+                                   
+                                </li>
+                                
+                                 <li id="menu-item-222" class="left-flyout menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-980"><a href='@Url.Action("MyParts","ClickBuyConfirm")'>My Parts</a>
+                                   
+                                </li>
+                                   
+                                <li id="menu-item-223" class="left-flyout menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-980"><a href='@Url.Action("Create","ServiceApp")'>Service Application</a>
+                                   
+                                </li>
+    	
+    	
+    	
+</ul>
+</li>
+
+          
+                                
+                          
+                                <li id="menu-item-984" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-984"><a href='@Url.Action("Shop","ClickShop")'>Shop</a>
+                                    
+                                </li>
+                                <li id="menu-item-980" class="left-flyout menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-980"><a href='@Url.Action("ContactUs","ClickContact")'>Contact</a>
+                                   
+                                </li>
+                               
+                                 <li id="menu-item-25" class="left-flyout menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-980"><a href='@Url.Action("Create","BranchMap")'>Branches</a>
+                                   
+                                </li>
+                               
+                                 
+                                
+                                 <li id="menu-item-989" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-989">
+                                     @{
+                                        
+                                         
+                                         if (Session["UserLoginId"] != null)
+                                         {
+                                     <a href='@Url.Action("Create","Login")'>LogOut</a>
+                                     }
+                                     
+                                     else
+                                     {
+                                     <a href='@Url.Action("Create","Login")'>LogIn</a>
+                                     }
+                                     
+                                         
+                                     }
+                                     </li>
+                            </ul>
+                            
+                        </nav>
+                    </div>
+                    <div class="mobile-menu-container">
+                        <div class="mobile-menu-divider"></div>
+                        <nav class="menu-main-menu-container">
+                            <ul id="menu-main-menu-1" class="mobile-menu">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4 current_page_item menu-item-972"><a href="http://quanticalabs.com/wp_themes/carservice/">Home</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-973"><a href="http://quanticalabs.com/wp_themes/carservice/services/">Services</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-ql_services menu-item-1001"><a href='@Url.Action("Create","EngineDia")'>Engine Diagnostics</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-ql_services menu-item-1000"><a href="http://quanticalabs.com/wp_themes/carservice/services/lube-oil-and-filters/">Lube Oil and Filters</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-ql_services menu-item-999"><a href="http://quanticalabs.com/wp_themes/carservice/services/belts-and-hoses/">Belts and Hoses</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-ql_services menu-item-998"><a href="http://quanticalabs.com/wp_themes/carservice/services/air-conditioning/">Air Conditioning</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-ql_services menu-item-997"><a href="http://quanticalabs.com/wp_themes/carservice/services/household-repairs/">Brake Repair</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-ql_services menu-item-996"><a href="http://quanticalabs.com/wp_themes/carservice/services/tire-and-wheel-services/">Tire and Wheel Services</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-974"><a href="http://quanticalabs.com/wp_themes/carservice/galleries/">Gallery</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-ql_galleries menu-item-1009"><a href="http://quanticalabs.com/wp_themes/carservice/galleries/engine-diagnostics/">Engine Diagnostics</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-ql_galleries menu-item-1008"><a href="http://quanticalabs.com/wp_themes/carservice/galleries/oil-change/">Oil Change</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-ql_galleries menu-item-1007"><a href="http://quanticalabs.com/wp_themes/carservice/galleries/belts-and-hoses/">Belts and Hoses</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-ql_galleries menu-item-1006"><a href="http://quanticalabs.com/wp_themes/carservice/galleries/tire-change/">Tire Change</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-ql_galleries menu-item-1005"><a href="http://quanticalabs.com/wp_themes/carservice/galleries/wheel-services/">Wheel Services</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-ql_galleries menu-item-1004"><a href="http://quanticalabs.com/wp_themes/carservice/galleries/lube-services/">Lube Services</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-ql_galleries menu-item-1003"><a href="http://quanticalabs.com/wp_themes/carservice/galleries/brake-repair/">Brake Repair</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-ql_galleries menu-item-1002"><a href="http://quanticalabs.com/wp_themes/carservice/galleries/other-car-services/">Other Car Services</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-975"><a href="http://quanticalabs.com/wp_themes/carservice/about/">Pages</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-976"><a href="http://quanticalabs.com/wp_themes/carservice/about/">About</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1010"><a href="http://quanticalabs.com/wp_themes/carservice/404-page-not-found/">404 Not Found</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-969"><a href="http://quanticalabs.com/wp_themes/carservice/services/">Services</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-ql_services menu-item-1011"><a href="http://quanticalabs.com/wp_themes/carservice/services/engine-diagnostics/">Single Service</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-970"><a href="http://quanticalabs.com/wp_themes/carservice/galleries/">Galleries</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-ql_galleries menu-item-1012"><a href="http://quanticalabs.com/wp_themes/carservice/galleries/engine-diagnostics/">Single Gallery</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-977"><a href="http://quanticalabs.com/wp_themes/carservice/blog/">Blog</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-971"><a href="http://quanticalabs.com/wp_themes/carservice/blog/">Blog</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-983"><a href="http://quanticalabs.com/wp_themes/carservice/blog-left-sidebar/">Blog Left Sidebar</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-978"><a href="http://quanticalabs.com/wp_themes/carservice/blog-2-columns/">Blog 2 Columns</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-988"><a href="http://quanticalabs.com/wp_themes/carservice/2015/04/25/what-a-difference-a-few-months-make/">Single Post</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-979"><a href="http://quanticalabs.com/wp_themes/carservice/search-page-template/">Search Template</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-989"><a href="http://quanticalabs.com/wp_themes/carservice/appointment/">Appointment</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-984"><a href="http://quanticalabs.com/wp_themes/carservice/shop/">Shop</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-987"><a href="http://quanticalabs.com/wp_themes/carservice/shop/">Products</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-986"><a href="http://quanticalabs.com/wp_themes/carservice/cart/">Cart</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-985"><a href="http://quanticalabs.com/wp_themes/carservice/my-account/">My Account</a></li>
+                                    </ul>
+                                </li>
+                                <li class="left-flyout menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-980"><a href="http://quanticalabs.com/wp_themes/carservice/contact-style-1/">Contact</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-981"><a href="http://quanticalabs.com/wp_themes/carservice/contact-style-1/">Contact Style 1</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-982"><a href="http://quanticalabs.com/wp_themes/carservice/contact-style-2/">Contact Style 2</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Header -->
+        
+        
+                        @RenderBody()
+
+        <div class="vc_row wpb_row vc_row-fluid dark-gray full-width footer-row padding-top-30 padding-bottom-50">
+           
+                <div class="vc_row wpb_row vc_inner vc_row-fluid row-4-4">
+				 <div class='vc_col-sm-3 wpb_column vc_column_container widget cs_contact_details_widget'>
+                        <h6 class='box-header'>HOURS</h6>
+                        <ul class="list simple margin-top-20">
+                            <li><span>Monday:</span>8:00am - 8:00pm</li>
+                            <li><span>Tuesday:</span>8:00am - 8:00pm</li>
+                            <li><span>Wednesday:</span>8:00am - 8:00pm</li>
+                            <li><span>Thursday:</span>8:00am - 8:00pm</li>
+                            <li><span>Friday:</span>8:00am - 8:00pm</li>
+                            <li><span>Saturday:</span>8:00am - 8:00pm</li>
+                            <li><span>Sunday:</span>8:00am - 1:00pm</li>
+                        </ul>
+                    </div>
+                    <div class='vc_col-sm-3 wpb_column vc_column_container widget cs_list_widget'>
+                        <h6 class='box-header'>OUR SERVICES</h6>
+                        <ul class="list margin-top-20">
+                            <li class="template-bullet">Engine Diagnostics</li>
+                            <li class="template-bullet">Lube, Oil and Filters</li>
+                            <li class="template-bullet">Belts and Hoses</li>
+                            <li class="template-bullet">Air Conditioning</li>
+                            <li class="template-bullet">Brake Repair</li>
+                            <li class="template-bullet">Tire and Wheel Services</li>
+                            <li class="template-bullet">Other Car Services</li>
+                        </ul>
+                    </div>
+                    <div class='vc_col-sm-3 wpb_column vc_column_container widget widget_tag_cloud'>
+                        <h6 class='box-header'>POPULAR TAGS</h6>
+                        <div class="tagcloud">
+                            <a href='#' class='tag-link-13' title='3 topics' style='font-size: 18.5pt;'>Belts</a>
+                            <a href='#' class='tag-link-14' title='4 topics' style='font-size: 22pt;'>Brakes</a>
+                            <a href='#' class='tag-link-15' title='2 topics' style='font-size: 14.3pt;'>Diagnostics</a>
+                            <a href='#' class='tag-link-16' title='1 topic' style='font-size: 8pt;'>Engine</a>
+                            <a href='#' class='tag-link-17' title='1 topic' style='font-size: 8pt;'>Filters</a>
+                            <a href='#' class='tag-link-18' title='1 topic' style='font-size: 8pt;'>Heating</a>
+                            <a href='#' class='tag-link-19' title='1 topic' style='font-size: 8pt;'>Oils</a>
+                            <a href='#' class='tag-link-20' title='2 topics' style='font-size: 14.3pt;'>Steering</a>
+                            <a href='#' class='tag-link-21' title='3 topics' style='font-size: 18.5pt;'>Suspension</a>
+                            <a href='#' class='tag-link-22' title='2 topics' style='font-size: 14.3pt;'>Tires</a>
+                            <a href='#' class='tag-link-23' title='1 topic' style='font-size: 8pt;'>Transmission</a>
+                        </div>
+                    </div>
+                    <div class='vc_col-sm-3 wpb_column vc_column_container widget cs_contact_details_widget'>
+                        <h6 class='box-header'>ABOUT US</h6>
+                        <ul class="list simple margin-top-20">
+                            <li>S-O-FLY</li>
+                            <li>501 Archwood Lane</li>
+                            <li><span>Mobile:</span>(520) 577 2710</li>
+                            <li><span>Assistance:</span>(520) 577 2725</li>
+                            <li><span>E-mail:</span><a href="#">carsofly@gmail.com</a></li>
+                        </ul>
+                        
+                    </div>
+                   
+                </div>
+            
+        </div>
+        <div class="vc_row wpb_row vc_row-fluid align-center padding-top-bottom-30">
+            <span class="copyright">© Copyright 2016 S-O-FLY 				</span>
+        </div>
+    </div>
+    <div class="background-overlay"></div>
+    <a href="#top" class="scroll-top animated-element template-arrow-up" title="Scroll to top"></a>
+    <link rel="stylesheet" property='stylesheet' type="text/css" href='@Url.Content("~/cs/style_selector.css")'>
+    <script type="text/javascript" src='@Url.Content("~/jsu/style_selector.js")'></script>
+    
+    <script type='text/javascript' src='@Url.Content("~/jsu/jquery.blockUI.min.js?ver=2.70")'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var woocommerce_params = { "ajax_url": "\/wp_themes\/carservice\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/wp_themes\/carservice\/?wc-ajax=%%endpoint%%" };
+        /* ]]> */
+</script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/woocommerce.min.js?ver=2.4.7")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/jquery.cookie.min.js?ver=1.4.1")'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var wc_cart_fragments_params = { "ajax_url": "\/wp_themes\/carservice\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/wp_themes\/carservice\/?wc-ajax=%%endpoint%%", "fragment_name": "wc_fragments" };
+        /* ]]> */
+</script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/cart-fragments.min.js?ver=2.4.7")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/core.min.js?ver=1.11.4")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/widget.min.js?ver=1.11.4")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/accordion.min.js?ver=1.11.4")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/tabs.min.js?ver=1.11.4")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/datepicker.min.js?ver=1.11.4")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/position.min.js?ver=1.11.4")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/menu.min.js?ver=1.11.4")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/selectmenu.min.js?ver=1.11.4")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/mouse.min.js?ver=1.11.4")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/slider.min.js?ver=1.11.4")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/jquery.ui.touch-punch.min.js?ver=4.3.2")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/jquery.isotope.min.js?ver=4.3.2")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/jquery.ba-bbq.min.js?ver=4.3.2")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/jquery.easing.1.3.min.js?ver=4.3.2")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/jquery.carouFredSel-6.2.1-packed.js?ver=4.3.2")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/jquery.touchSwipe.min.js?ver=4.3.2")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/jquery.transit.min.js?ver=4.3.2")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/jquery.hint.min.js?ver=4.3.2")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/jquery.costCalculator.min.js?ver=4.3.2")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/jquery.parallax.min.js?ver=4.3.2")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/jquery.qtip.min.js?ver=4.3.2")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/jquery.blockUI.min.js?ver=4.3.2")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/jquery.prettyPhoto.js?ver=4.3.2")'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var config = [];
+        config = { "ajaxurl": "http:\/\/quanticalabs.com\/wp_themes\/carservice\/wp-admin\/admin-ajax.php", "themename": "carservice", "home_url": "http:\/\/quanticalabs.com\/wp_themes\/carservice", "is_rtl": 0 };;
+        /* ]]> */
+</script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/main.js?ver=4.3.2")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/odometer.min.js?ver=4.3.2")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/js_composer_front.js?ver=4.7.4")'></script>
+    <script type='text/javascript' src='@Url.Content("~/jsu/price-slider.min.js?ver=2.4.7")'></script>
+
+      @RenderSection("scripts", required: false)
+</body>
+</html>

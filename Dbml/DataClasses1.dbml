@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="S_O_FLY" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=kushal-laptop;Initial Catalog=S_O_FLY;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="S_O_FLYConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Tbl_Category" Member="Tbl_Categories">
+    <Type Name="Tbl_Category">
+      <Column Name="Category_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Category_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Discription" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Area" Member="Tbl_Areas">
+    <Type Name="Tbl_Area">
+      <Column Name="Area_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Area_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_City" Member="Tbl_Cities">
+    <Type Name="Tbl_City">
+      <Column Name="City_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="City_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="State_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Country" Member="Tbl_Countries">
+    <Type Name="Tbl_Country">
+      <Column Name="Country_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Country_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Payment" Member="Tbl_Payments">
+    <Type Name="Tbl_Payment">
+      <Column Name="Payment_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="User_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Service" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Charge" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Payment_Date" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Payment_Type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Cheque_No" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Bank" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_State" Member="Tbl_States">
+    <Type Name="Tbl_State">
+      <Column Name="State_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="State_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Country_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_SubCategoty" Member="Tbl_SubCategoties">
+    <Type Name="Tbl_SubCategoty">
+      <Column Name="SubCategory_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SubCateName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SubCateDiscription" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Category_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Feedback" Member="Tbl_Feedbacks">
+    <Type Name="Tbl_Feedback">
+      <Column Name="Feedback_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="User_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Feedback" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Tbl_UserReg_Tbl_Feedback" Member="Tbl_UserReg" ThisKey="User_Id" OtherKey="User_Id" Type="Tbl_UserReg" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Login" Member="Tbl_Logins">
+    <Type Name="Tbl_Login">
+      <Column Name="Login_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_UserReg" Member="Tbl_UserRegs">
+    <Type Name="Tbl_UserReg">
+      <Column Name="User_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ConfirmPassword" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Country_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="State_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="City_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ContactNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Login_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Tbl_UserReg_Tbl_Feedback" Member="Tbl_Feedbacks" ThisKey="User_Id" OtherKey="User_Id" Type="Tbl_Feedback" />
+      <Association Name="Tbl_UserReg_Tbl_Complain" Member="Tbl_Complains" ThisKey="User_Id" OtherKey="User_Id" Type="Tbl_Complain" />
+      <Association Name="Tbl_UserReg_Tbl_ServiceApp" Member="Tbl_ServiceApps" ThisKey="User_Id" OtherKey="User_Id" Type="Tbl_ServiceApp" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Car" Member="Tbl_Cars">
+    <Type Name="Tbl_Car">
+      <Column Name="Car_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Car_Model" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Car_No" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="User_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_BuyPart" Member="Tbl_BuyParts">
+    <Type Name="Tbl_BuyPart">
+      <Column Name="Buy_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Part_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Category_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SubCategory_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="User_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PartPrice" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Tbl_Part_Tbl_BuyPart" Member="Tbl_Part" ThisKey="Part_Id" OtherKey="Part_Id" Type="Tbl_Part" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Parts" Member="Tbl_Parts">
+    <Type Name="Tbl_Part">
+      <Column Name="Part_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PartName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Category_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SubCategory_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Part_No" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PartUsage" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PartPrice" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PartImage" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="Tbl_Part_Tbl_BuyPart" Member="Tbl_BuyParts" ThisKey="Part_Id" OtherKey="Part_Id" Type="Tbl_BuyPart" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_WorkerReg" Member="Tbl_WorkerRegs">
+    <Type Name="Tbl_WorkerReg">
+      <Column Name="Worker_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Country_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="State_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="City_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Experience" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Contact_No" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Branch_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Login_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Service" Member="Tbl_Services">
+    <Type Name="Tbl_Service">
+      <Column Name="Service_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ServiceName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ServiceDiscription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ServiceCharge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ServiceImage" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="Tbl_Service_Tbl_BuyService" Member="Tbl_BuyServices" ThisKey="Service_Id" OtherKey="Service_Id" Type="Tbl_BuyService" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Complain" Member="Tbl_Complains">
+    <Type Name="Tbl_Complain">
+      <Column Name="Complain_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="User_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Complain" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Reply" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="Tbl_UserReg_Tbl_Complain" Member="Tbl_UserReg" ThisKey="User_Id" OtherKey="User_Id" Type="Tbl_UserReg" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Branch" Member="Tbl_Branches">
+    <Type Name="Tbl_Branch">
+      <Column Name="Branch_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Area_Id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City_Id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="State_Id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Country_Id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Contact_No" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Longitude" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Latitude" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_BuyService" Member="Tbl_BuyServices">
+    <Type Name="Tbl_BuyService">
+      <Column Name="BuyService_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Service_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="User_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ServiceCharge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Tbl_Service_Tbl_BuyService" Member="Tbl_Service" ThisKey="Service_Id" OtherKey="Service_Id" Type="Tbl_Service" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_ServiceApp" Member="Tbl_ServiceApps">
+    <Type Name="Tbl_ServiceApp">
+      <Column Name="User_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Service_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Appointment_Date" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Service" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Problem" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="CarModel" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Branch_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Tbl_UserReg_Tbl_ServiceApp" Member="Tbl_UserReg" ThisKey="User_Id" OtherKey="User_Id" Type="Tbl_UserReg" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.New" Member="News">
+    <Type Name="New">
+      <Column Name="message" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

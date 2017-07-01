@@ -1,0 +1,134 @@
+﻿@model MvcApplication2.Models.Model_Worker
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="row">
+							<div class="col-lg-6">
+								<div class="card-box">
+										<h4 class="m-t-0 header-title"><b>Worker Registration</b></h4>
+									
+	
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+	                                        
+									<div action="#" data-parsley-validate novalidate>
+
+                                        <div class="form-group">
+	                                                <label for="subname">Worker Id*</label>
+	                                                
+              @Html.TextBoxFor(model => model.Worker_Id, new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.Worker_Id)
+	                                                    
+														</div>
+										
+
+										<div class="form-group">
+	                                                <label for="subname">First Name*</label>
+	                                                
+              @Html.TextBoxFor(model => model.FirstName, new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.FirstName)
+	                                                    
+														</div>
+										
+                                        <div class="form-group">
+	                                                <label for="subname">Last Name*</label>
+	                                                
+              @Html.TextBoxFor(model => model.LastName, new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.LastName)
+	                                                    
+														</div>
+                                         <div class="form-group">
+	                                                <label for="subname">User Name*</label>
+	                                                
+              @Html.TextBoxFor(model => model.UserName, new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.UserName)
+	                                                    
+														</div>
+                                         <div class="form-group">
+	                                                <label for="subname">Password*</label>
+	                                                
+              @Html.TextBoxFor(model => model.Password, new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.Password)
+	                                                    
+														</div>
+                                         <div class="form-group">
+	                                                <label for="subname">Address*</label>
+	                                                
+              @Html.TextBoxFor(model => model.Address, new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.Address)
+	                                                    
+														</div>
+
+
+                                         <div class="form-group">
+	                                                <label for="subname">Country*</label>
+	                                                
+              @Html.DropDownListFor(model => model.Country_Id,(IEnumerable<SelectListItem>)ViewBag.countryid,"--Select--", new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.Country_Id)
+	                                                    
+														</div>
+
+                                         <div class="form-group">
+	                                                <label for="subname">State*</label>
+	                                                
+              @Html.DropDownListFor(model => model.State_Id,(IEnumerable<SelectListItem>)ViewBag.stateid,"--Select--", new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.State_Id)
+	                                                    
+														</div>
+
+                                         <div class="form-group">
+	                                                <label for="subname">City*</label>
+	                                                
+              @Html.DropDownListFor(model => model.City_Id,(IEnumerable<SelectListItem>)ViewBag.cityid,"--Select--", new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.City_Id)
+	                                                    
+														</div>
+
+                                        <div class="form-group">
+	                                                <label for="subname">Experience*</label>
+	                                                
+              @Html.TextBoxFor(model => model.Experience, new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.Experience)
+	                                                    
+														</div>
+
+                                        <div class="form-group">
+	                                                <label for="subname">Contact Number*</label>
+	                                                
+              @Html.TextBoxFor(model => model.Contact_No, new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.Contact_No)
+	                                                    
+														</div>
+
+                                        <div class="form-group">
+	                                                <label for="subname">Email Address*</label>
+	                                                
+              @Html.TextBoxFor(model => model.Email, new { @class="form-control"})
+            @Html.ValidationMessageFor(model => model.Email)
+	                                                    
+														</div>
+
+
+												<div class="form-group text-right m-b-0">
+											<button class="btn btn-primary waves-effect waves-light" type="submit">
+												Delete
+											</button>
+                                                    </div>
+									</div>
+}
+								</div>
+							</div>
+							
+            		</div>
+
+
+
+@using (Html.BeginForm()) {
+    <p>
+        
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

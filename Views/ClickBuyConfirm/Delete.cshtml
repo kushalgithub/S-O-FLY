@@ -1,0 +1,61 @@
+﻿@model MvcApplication2.Dbml.Tbl_BuyPart
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/User_LayoutPage1.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Tbl_BuyPart</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Part_Id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Part_Id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Category_Id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Category_Id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SubCategory_Id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SubCategory_Id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Quantity)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Quantity)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.User_Id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.User_Id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PartPrice)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PartPrice)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
